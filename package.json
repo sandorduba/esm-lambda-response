@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/sandorduba/lambda-response#readme",
   "devDependencies": {
+    "@types/aws-lambda": "^8.10.92",
     "@types/jest": "^27.4.0",
     "eslint": "^8.8.0",
     "jest": "^27.5.1",
