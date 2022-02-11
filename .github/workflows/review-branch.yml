@@ -1,12 +1,12 @@
 name: Review Branch Testing
 
-runs-on: [self-hosted, linux, ARM64]
 
 on:
   push:
     branches: [ review/* ]
 
 jobs:
+  runs-on: [self-hosted, linux, ARM64]
   test:
     runs-on: node:14
     steps:
