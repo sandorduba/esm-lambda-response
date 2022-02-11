@@ -5,9 +5,10 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "test": "jest",
-    "test:coverage": "jest --coverage",
-    "test:watch": "jest --watchAll --coverage"
+    "test": "jest src/",
+    "test:coverage": "jest --coverage src/",
+    "test:watch": "jest --watchAll --coverage src/",
+    "lint": "eslint src/"
   },
   "repository": {
     "type": "git",
