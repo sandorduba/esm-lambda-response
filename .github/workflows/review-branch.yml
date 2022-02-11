@@ -1,5 +1,7 @@
 name: Review Branch Testing
 
+runs-on: [self-hosted, linux, ARM64]
+
 on:
   push:
     branches: [ review/* ]
