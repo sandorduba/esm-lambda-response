@@ -6,9 +6,8 @@ on:
     branches: [ review/* ]
 
 jobs:
-  runs-on: [self-hosted, linux, ARM64]
   test:
-    runs-on: node:14
+    runs-on: [self-hosted, node:14, linux, ARM64]
     steps:
       - uses: actions/checkout@v2
 
