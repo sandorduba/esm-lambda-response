@@ -1,13 +1,12 @@
 name: Review Branch Testing
 
-
 on:
   push:
     branches: [ review/* ]
 
 jobs:
   test:
-    runs-on: [self-hosted, node:14, linux, ARM64]
+    runs-on: [self-hosted, linux, ARM64]
     steps:
       - uses: actions/checkout@v2
 
