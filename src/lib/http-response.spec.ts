@@ -1,5 +1,5 @@
-import { APIGatewayProxyResult } from "aws-lambda";
-import { HttpResponse } from ".";
+import { APIGatewayProxyResult } from 'aws-lambda';
+import { HttpResponse } from './http-response';
 
 describe('HttpResponse function tests', () => {
   it('should exist', () => {
@@ -13,7 +13,7 @@ describe('HttpResponse function tests', () => {
       headers: {
         'content-type': 'application/json',
       },
-      body: '{\"dummy\":\"value\"}',
+      body: '{"dummy":"value"}',
     });
   });
 });
