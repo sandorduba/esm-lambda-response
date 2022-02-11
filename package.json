@@ -4,7 +4,10 @@
   "description": "The goal is to have a minimalist lib to wrap AWS lambda responses.",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watchAll --coverage"
   },
   "repository": {
     "type": "git",
