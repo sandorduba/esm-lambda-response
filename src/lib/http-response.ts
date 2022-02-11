@@ -4,7 +4,7 @@ export const HttpResponse = (
   statusCode: number,
   body: Object,
   opts?: {
-    headers: APIGatewayProxyEventHeaders
+    headers: APIGatewayProxyEventHeaders;
   },
 ): APIGatewayProxyResult => ({
   statusCode,
