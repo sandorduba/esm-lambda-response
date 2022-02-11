@@ -1,0 +1,17 @@
+name: CI
+
+on:
+  push:
+    branches: [ review/* ]
+
+jobs:
+  test:
+    runs-on: node:14
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run a multi-line script
+        run: |
+          npm install,
+          npm run lint,
+          npm run test.
