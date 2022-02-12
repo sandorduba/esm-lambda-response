@@ -1,0 +1,17 @@
+name: Review Branch Testing
+
+on:
+  push:
+    branches: [ review/* ]
+
+jobs:
+  test:
+    runs-on: [self-hosted, linux]
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: install and test
+        run: |
+          npm install
+          npm run lint
+          npm run test

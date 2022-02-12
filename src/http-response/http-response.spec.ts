@@ -1,19 +1,40 @@
-import { APIGatewayProxyResult } from 'aws-lambda';
-import { HttpResponse } from './http-response';
+import {
+  mockGeneralResponseWrapper,
+  mockResult,
+} from '../test-utils/general-response-wrapper.mock';
+import { httpResponse } from './http-response';
 
-describe('HttpResponse function tests', () => {
-  it('should exist', () => {
-    expect(HttpResponse).toBeDefined();
+describe('httpResponse function tests', () => {
+  it('should pass status code to general response wrapper', () => {
+    const statusCode = 200;
+    const result = httpResponse(statusCode, {});
+    expect(mockGeneralResponseWrapper).toHaveBeenCalledWith(
+      statusCode,
+      {},
+      undefined
+    );
+    expect(result).toEqual(mockResult);
   });
 
-  it('should return the passed values', () => {
-    const result: APIGatewayProxyResult = HttpResponse(200, { dummy: 'value' });
-    expect(result).toStrictEqual({
-      statusCode: 200,
-      headers: {
-        'content-type': 'application/json',
-      },
-      body: '{"dummy":"value"}',
-    });
+  it('should pass opts as well', () => {
+    const statusCode = 200;
+    const opts = { random: 'opts' };
+    httpResponse(statusCode, {}, opts as any);
+    expect(mockGeneralResponseWrapper).toHaveBeenCalledWith(
+      statusCode,
+      {},
+      opts
+    );
+  });
+
+  it('should pass the body params', () => {
+    const statusCode = 200;
+    const body = { random: 'opts' };
+    httpResponse(statusCode, body);
+    expect(mockGeneralResponseWrapper).toHaveBeenCalledWith(
+      statusCode,
+      body,
+      undefined
+    );
   });
 });
