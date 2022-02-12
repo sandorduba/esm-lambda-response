@@ -12,7 +12,7 @@ jobs:
         with:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
-      - run: npm version prerelease --preid=dev
+      - run: npm version prerelease --preid=dev --no-git-tag-version
       - run: npm ci
       - run: npm build
       - run: npm publish --tag dev
