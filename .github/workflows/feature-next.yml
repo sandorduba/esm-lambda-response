@@ -1,20 +1,16 @@
-# name: CI
+name: feature/next PR test
 
-# on:
-#   push:
-#     branches: [ feature/next ]
+on:
+  pull_request:
+    branches: [ feature/next ]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
-# jobs:
-#   test:
-#     runs-on: node:14
-#     steps:
-#       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-#       - uses: actions/checkout@v2
-
-#       - name: Run a multi-line script
-#         run: |
-#           npm install,
-#           npm run lint,
-#           npm run test,
-#           npm run build.
+jobs:
+  test:
+    runs-on: [self-hosted, linux]
+    steps:
+      - uses: actions/checkout@v2
+        run: |
+          npm install,
+          npm run lint,
+          npm run test,
+          npm run build.
