@@ -1,6 +1,6 @@
 {
   "name": "esm-lambda-response",
-  "version": "0.2.0-0",
+  "version": "0.3.0-0",
   "description": "The goal is to have a minimalist lib to wrap AWS lambda responses.",
   "main": "dist/index.js",
   "scripts": {
