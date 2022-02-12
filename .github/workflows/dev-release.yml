@@ -14,7 +14,7 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - run: npm version prerelease --preid=dev --no-git-tag-version
       - run: npm ci
-      - run: npm build
+      - run: npm run build
       - run: npm publish --tag dev
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
