@@ -2,6 +2,13 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node',
-  coverageDirectory: 'coverage',
   testMatch: ['**/*.spec.ts'],
+  coverageDirectory: 'coverage',
+  collectCoverageFrom: ['**/*.ts'],
+  coveragePathIgnorePatterns: [
+    '/node_modules/',
+    '/dist/',
+    '/coverage/',
+    'src/index.ts',
+  ],
 };

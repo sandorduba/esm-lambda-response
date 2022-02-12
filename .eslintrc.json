@@ -31,7 +31,7 @@
     },
     "overrides": [
         {
-            "files": "*.spec.ts",
+            "files": ["*.spec.ts", "*.mock.ts"],
             "env": {
                 "jest": true
             }

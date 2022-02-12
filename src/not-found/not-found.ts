@@ -2,8 +2,9 @@ import { APIGatewayProxyResult } from 'aws-lambda';
 import { generalResponseWrapper } from '../general-response-wrapper/general-response-wrapper';
 import { ResponseOptions } from '../interfaces/response-options';
 
-export const httpResponse = (
-  statusCode: number,
-  body?: Object,
+export const notFound = (
+  error?: string,
   opts?: ResponseOptions
-): APIGatewayProxyResult => generalResponseWrapper(statusCode, body, opts);
+): APIGatewayProxyResult => {
+  return generalResponseWrapper(404, error ? { error } : {}, opts);
+};
