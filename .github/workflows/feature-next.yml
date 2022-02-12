@@ -1,0 +1,22 @@
+name: feature/next PR test
+
+on:
+  pull_request:
+    branches: [ feature/next ]
+
+jobs:
+  test:
+    runs-on: [self-hosted, linux]
+    steps:
+      - name: install
+        run: |
+          npm install
+
+      - name: unit test
+        run: |
+          npm run lint
+          npm run test
+
+      - name: build
+        run: |
+          npm run build
