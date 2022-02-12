@@ -1,6 +1,6 @@
 {
-  "name": "lambda-response",
-  "version": "0.0.1",
+  "name": "esm-lambda-response",
+  "version": "0.0.3",
   "description": "The goal is to have a minimalist lib to wrap AWS lambda responses.",
   "main": "dist/index.js",
   "scripts": {
@@ -15,7 +15,7 @@
     "url": "git+https://github.com/sandorduba/lambda-response.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Sándor Károly Duba",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/sandorduba/lambda-response/issues"
