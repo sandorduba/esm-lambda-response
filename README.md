@@ -53,3 +53,7 @@ export const handler = async (event: APIGatewayProxyEvent): Promise<APIGatewayPr
 }
 ```
 > Note: You can pass `undefined` as a body, in that case it will be converted to `{}`
+
+## Contribution
+
+TBD
